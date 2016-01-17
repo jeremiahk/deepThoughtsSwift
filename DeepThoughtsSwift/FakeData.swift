@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct fakeData {
-    let titles = ["Is there another word for 'synonym'?", "Is there another word for 'synonym'?1 alkdjf alskdjf alskdjflas dflkasd jflkasdj flka sdflk asjdflkjasdf asdfklj alksdjfkjsadf kasdjf asdkl;fjlk asdlkfjjsdlkjf adkfj kajsdf l;k", "Is there another"]
+public struct FakeData {
+    public let titles = ["Is there another word for 'synonym'?", "Is there another word for 'synonym'?1 alkdjf alskdjf alskdjflas dflkasd jflkasdj flka sdflk asjdflkjasdf asdfklj alksdjfkjsadf kasdjf asdkl;fjlk asdlkfjjsdlkjf adkfj kajsdf l;k", "Is there another"]
     
-    let categories = ["Random thoughts", "Random thoughts1", "Random thoughts2"]
+    public let categories = ["Random thoughts", "Random thoughts1", "Random thoughts2"]
 }
