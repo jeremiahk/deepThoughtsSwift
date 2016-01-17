@@ -97,12 +97,14 @@
 		271313011C4C25A8002FF628 /* DeepThoughtsSwift */ = {
 			isa = PBXGroup;
 			children = (
+				271313331C4C26F9002FF628 /* SupportFiles */,
+				271313321C4C26EB002FF628 /* Controllers */,
+				271313311C4C26DD002FF628 /* MainView */,
+				271313301C4C26CE002FF628 /* SettingsView */,
 				271313021C4C25A8002FF628 /* AppDelegate.swift */,
 				271313041C4C25A8002FF628 /* ViewController.swift */,
 				271313061C4C25A8002FF628 /* Main.storyboard */,
-				271313091C4C25A8002FF628 /* Assets.xcassets */,
 				2713130B1C4C25A8002FF628 /* LaunchScreen.storyboard */,
-				2713130E1C4C25A8002FF628 /* Info.plist */,
 			);
 			path = DeepThoughtsSwift;
 			sourceTree = "<group>";
@@ -123,6 +125,36 @@
 				271313241C4C25A9002FF628 /* Info.plist */,
 			);
 			path = DeepThoughtsSwiftUITests;
+			sourceTree = "<group>";
+		};
+		271313301C4C26CE002FF628 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SettingsView;
+			sourceTree = "<group>";
+		};
+		271313311C4C26DD002FF628 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		271313321C4C26EB002FF628 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		271313331C4C26F9002FF628 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				271313091C4C25A8002FF628 /* Assets.xcassets */,
+				2713130E1C4C25A8002FF628 /* Info.plist */,
+			);
+			name = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DeepThoughtsSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwk.DeepThoughtsSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DeepThoughtsSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwk.DeepThoughtsSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
