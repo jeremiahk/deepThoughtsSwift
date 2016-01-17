@@ -30,8 +30,6 @@ class MainTableViewManager: NSObject, UITableViewDataSource, UITableViewDelegate
         
         let height = attributedString.boundingRectWithSize(CGSize(width: 299, height: 1000), options: [NSStringDrawingOptions.UsesLineFragmentOrigin, NSStringDrawingOptions.UsesFontLeading, NSStringDrawingOptions.UsesDeviceMetrics], context: nil).height
         
-            NSLog("Height is \(height)")
-        
         return height + 64.0;
     }
 }
