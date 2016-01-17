@@ -14,6 +14,8 @@
 		2713130D1C4C25A8002FF628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2713130B1C4C25A8002FF628 /* LaunchScreen.storyboard */; };
 		271313181C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313171C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift */; };
 		271313231C4C25A9002FF628 /* DeepThoughtsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313221C4C25A9002FF628 /* DeepThoughtsSwiftUITests.swift */; };
+		271313351C4C2795002FF628 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313341C4C2795002FF628 /* MainViewController.swift */; };
+		271313371C4C2801002FF628 /* SettingsViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313361C4C2801002FF628 /* SettingsViewControllers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,15 +40,17 @@
 		271313021C4C25A8002FF628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		271313041C4C25A8002FF628 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		271313071C4C25A8002FF628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		271313091C4C25A8002FF628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		271313091C4C25A8002FF628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SupportingFiles/Assets.xcassets; sourceTree = "<group>"; };
 		2713130C1C4C25A8002FF628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2713130E1C4C25A8002FF628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2713130E1C4C25A8002FF628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = SupportingFiles/Info.plist; sourceTree = "<group>"; };
 		271313131C4C25A9002FF628 /* DeepThoughtsSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepThoughtsSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		271313171C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepThoughtsSwiftTests.swift; sourceTree = "<group>"; };
 		271313191C4C25A9002FF628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2713131E1C4C25A9002FF628 /* DeepThoughtsSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepThoughtsSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		271313221C4C25A9002FF628 /* DeepThoughtsSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepThoughtsSwiftUITests.swift; sourceTree = "<group>"; };
 		271313241C4C25A9002FF628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		271313341C4C2795002FF628 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = MainView/MainViewController.swift; sourceTree = "<group>"; };
+		271313361C4C2801002FF628 /* SettingsViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewControllers.swift; path = SettingsView/SettingsViewControllers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 		271313301C4C26CE002FF628 /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
+				271313361C4C2801002FF628 /* SettingsViewControllers.swift */,
 			);
 			name = SettingsView;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 		271313311C4C26DD002FF628 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				271313341C4C2795002FF628 /* MainViewController.swift */,
 			);
 			name = MainView;
 			sourceTree = "<group>";
@@ -288,8 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271313351C4C2795002FF628 /* MainViewController.swift in Sources */,
 				271313051C4C25A8002FF628 /* ViewController.swift in Sources */,
 				271313031C4C25A8002FF628 /* AppDelegate.swift in Sources */,
+				271313371C4C2801002FF628 /* SettingsViewControllers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
