@@ -16,6 +16,7 @@
 		271313231C4C25A9002FF628 /* DeepThoughtsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313221C4C25A9002FF628 /* DeepThoughtsSwiftUITests.swift */; };
 		271313351C4C2795002FF628 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313341C4C2795002FF628 /* MainViewController.swift */; };
 		271313371C4C2801002FF628 /* SettingsViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313361C4C2801002FF628 /* SettingsViewControllers.swift */; };
+		271313391C4C2A55002FF628 /* MainTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313381C4C2A55002FF628 /* MainTableViewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		271313241C4C25A9002FF628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		271313341C4C2795002FF628 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = MainView/MainViewController.swift; sourceTree = "<group>"; };
 		271313361C4C2801002FF628 /* SettingsViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewControllers.swift; path = SettingsView/SettingsViewControllers.swift; sourceTree = "<group>"; };
+		271313381C4C2A55002FF628 /* MainTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewManager.swift; path = MainView/MainTableViewManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				271313341C4C2795002FF628 /* MainViewController.swift */,
+				271313381C4C2A55002FF628 /* MainTableViewManager.swift */,
 			);
 			name = MainView;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				271313351C4C2795002FF628 /* MainViewController.swift in Sources */,
+				271313391C4C2A55002FF628 /* MainTableViewManager.swift in Sources */,
 				271313051C4C25A8002FF628 /* ViewController.swift in Sources */,
 				271313031C4C25A8002FF628 /* AppDelegate.swift in Sources */,
 				271313371C4C2801002FF628 /* SettingsViewControllers.swift in Sources */,
