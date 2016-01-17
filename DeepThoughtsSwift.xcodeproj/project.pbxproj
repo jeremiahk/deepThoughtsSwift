@@ -17,6 +17,7 @@
 		271313351C4C2795002FF628 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313341C4C2795002FF628 /* MainViewController.swift */; };
 		271313371C4C2801002FF628 /* SettingsViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313361C4C2801002FF628 /* SettingsViewControllers.swift */; };
 		271313391C4C2A55002FF628 /* MainTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313381C4C2A55002FF628 /* MainTableViewManager.swift */; };
+		2713133B1C4C2C4B002FF628 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2713133A1C4C2C4B002FF628 /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		271313341C4C2795002FF628 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = MainView/MainViewController.swift; sourceTree = "<group>"; };
 		271313361C4C2801002FF628 /* SettingsViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewControllers.swift; path = SettingsView/SettingsViewControllers.swift; sourceTree = "<group>"; };
 		271313381C4C2A55002FF628 /* MainTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewManager.swift; path = MainView/MainTableViewManager.swift; sourceTree = "<group>"; };
+		2713133A1C4C2C4B002FF628 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewCell.swift; path = MainView/MainTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				271313341C4C2795002FF628 /* MainViewController.swift */,
 				271313381C4C2A55002FF628 /* MainTableViewManager.swift */,
+				2713133A1C4C2C4B002FF628 /* MainTableViewCell.swift */,
 			);
 			name = MainView;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				271313391C4C2A55002FF628 /* MainTableViewManager.swift in Sources */,
 				271313051C4C25A8002FF628 /* ViewController.swift in Sources */,
 				271313031C4C25A8002FF628 /* AppDelegate.swift in Sources */,
+				2713133B1C4C2C4B002FF628 /* MainTableViewCell.swift in Sources */,
 				271313371C4C2801002FF628 /* SettingsViewControllers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
