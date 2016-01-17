@@ -6,8 +6,9 @@
 //  Copyright © 2016 Jeremiah Kistler. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class MainTableViewCell: UITableViewCell {
 
+    
 }
