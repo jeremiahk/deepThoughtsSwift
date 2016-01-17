@@ -11,12 +11,15 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var circleButton: CircleButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.blackColor()
+    }
+    
+    @IBAction func touchUpInside(sender: CircleButton) {
+        self.navigationController?.popViewControllerAnimated(true)
     }
 }
