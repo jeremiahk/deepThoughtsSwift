@@ -91,5 +91,76 @@
             </objects>
             <point key="canvasLocation" x="48" y="249"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="78K-j2-YcU">
+            <objects>
+                <viewController id="Pan-QE-6K1" customClass="SettingsViewController" customModule="DeepThoughtsSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TCa-45-gx7"/>
+                        <viewControllerLayoutGuide type="bottom" id="idL-IX-BQ7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n8S-8P-fsC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-LO-jF2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainCell" id="sN1-Oy-FMd" customClass="SettingsTableViewCell" customModule="DeepThoughtsSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sN1-Oy-FMd" id="kdw-hD-XQQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnM-Sx-mKb">
+                                                    <rect key="frame" x="40" y="11" width="520" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="TnM-Sx-mKb" firstAttribute="centerY" secondItem="kdw-hD-XQQ" secondAttribute="centerY" id="0NP-D5-jPO"/>
+                                                <constraint firstItem="TnM-Sx-mKb" firstAttribute="leading" secondItem="kdw-hD-XQQ" secondAttribute="leading" constant="40" id="WG9-9j-Y3d"/>
+                                                <constraint firstAttribute="trailing" secondItem="TnM-Sx-mKb" secondAttribute="trailing" constant="40" id="eX9-ng-VI4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryLabel" destination="0NP-D5-jPO" id="3LS-9n-1HG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1z-BW-Lsz" customClass="CircleButton" customModule="DeepThoughtsSwift" customModuleProvider="target">
+                                <rect key="frame" x="536" y="0.0" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="REO-Q3-Kmu"/>
+                                    <constraint firstAttribute="height" constant="64" id="SdW-ig-7Zu"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="idL-IX-BQ7" firstAttribute="top" secondItem="Iba-LO-jF2" secondAttribute="bottom" id="CFs-VB-lRA"/>
+                            <constraint firstAttribute="trailing" secondItem="U1z-BW-Lsz" secondAttribute="trailing" id="DcJ-oD-ZeR"/>
+                            <constraint firstAttribute="trailing" secondItem="Iba-LO-jF2" secondAttribute="trailing" id="V4S-KU-Jyb"/>
+                            <constraint firstItem="Iba-LO-jF2" firstAttribute="top" secondItem="TCa-45-gx7" secondAttribute="bottom" id="Wso-FH-xmO"/>
+                            <constraint firstItem="U1z-BW-Lsz" firstAttribute="top" secondItem="TCa-45-gx7" secondAttribute="bottom" id="uKn-9t-8hs"/>
+                            <constraint firstItem="Iba-LO-jF2" firstAttribute="leading" secondItem="n8S-8P-fsC" secondAttribute="leading" id="xIk-ye-Ibi"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="circleButton" destination="U1z-BW-Lsz" id="oDc-SY-zfI"/>
+                        <outlet property="tableView" destination="Iba-LO-jF2" id="zni-Wp-9hP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNn-IA-UJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776" y="249"/>
+        </scene>
     </scenes>
 </document>
