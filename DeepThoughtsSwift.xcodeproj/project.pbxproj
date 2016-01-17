@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		271313031C4C25A8002FF628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313021C4C25A8002FF628 /* AppDelegate.swift */; };
-		271313051C4C25A8002FF628 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313041C4C25A8002FF628 /* ViewController.swift */; };
 		271313081C4C25A8002FF628 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271313061C4C25A8002FF628 /* Main.storyboard */; };
 		2713130A1C4C25A8002FF628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 271313091C4C25A8002FF628 /* Assets.xcassets */; };
 		2713130D1C4C25A8002FF628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2713130B1C4C25A8002FF628 /* LaunchScreen.storyboard */; };
@@ -42,7 +41,6 @@
 /* Begin PBXFileReference section */
 		271312FF1C4C25A8002FF628 /* DeepThoughtsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepThoughtsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		271313021C4C25A8002FF628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		271313041C4C25A8002FF628 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		271313071C4C25A8002FF628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		271313091C4C25A8002FF628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SupportingFiles/Assets.xcassets; sourceTree = "<group>"; };
 		2713130C1C4C25A8002FF628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 				271313311C4C26DD002FF628 /* MainView */,
 				271313301C4C26CE002FF628 /* SettingsView */,
 				271313021C4C25A8002FF628 /* AppDelegate.swift */,
-				271313041C4C25A8002FF628 /* ViewController.swift */,
 				271313061C4C25A8002FF628 /* Main.storyboard */,
 				2713130B1C4C25A8002FF628 /* LaunchScreen.storyboard */,
 				2713133C1C4C2F30002FF628 /* CircleButton.swift */,
@@ -310,7 +307,6 @@
 				271313351C4C2795002FF628 /* MainViewController.swift in Sources */,
 				2713133F1C4C3458002FF628 /* FakeData.swift in Sources */,
 				271313391C4C2A55002FF628 /* MainTableViewManager.swift in Sources */,
-				271313051C4C25A8002FF628 /* ViewController.swift in Sources */,
 				271313031C4C25A8002FF628 /* AppDelegate.swift in Sources */,
 				2713133B1C4C2C4B002FF628 /* MainTableViewCell.swift in Sources */,
 				271313371C4C2801002FF628 /* SettingsViewControllers.swift in Sources */,
