@@ -25,6 +25,13 @@
 		271313451C4C4D81002FF628 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313431C4C4D81002FF628 /* SettingsTableViewCell.swift */; };
 		271313471C4C4F84002FF628 /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */; };
 		271313481C4C4F84002FF628 /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */; };
+		27C9F8E01C4C54E000181DCC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313341C4C2795002FF628 /* MainViewController.swift */; };
+		27C9F8E11C4C54EF00181DCC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313361C4C2801002FF628 /* SettingsViewController.swift */; };
+		27C9F8E21C4C54F400181DCC /* MainTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313381C4C2A55002FF628 /* MainTableViewManager.swift */; };
+		27C9F8E31C4C54F700181DCC /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2713133A1C4C2C4B002FF628 /* MainTableViewCell.swift */; };
+		27C9F8E41C4C54FB00181DCC /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2713133C1C4C2F30002FF628 /* CircleButton.swift */; };
+		27C9F8E61C4C584F00181DCC /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9F8E51C4C584F00181DCC /* NavigationController.swift */; };
+		27C9F8E71C4C584F00181DCC /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9F8E51C4C584F00181DCC /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +73,7 @@
 		271313401C4C4D6C002FF628 /* SettingsTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewManager.swift; path = SettingsView/SettingsTableViewManager.swift; sourceTree = "<group>"; };
 		271313431C4C4D81002FF628 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewCell.swift; path = SettingsView/SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleTransitionAnimator.swift; path = Controllers/CircleTransitionAnimator.swift; sourceTree = "<group>"; };
+		27C9F8E51C4C584F00181DCC /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */,
+				27C9F8E51C4C584F00181DCC /* NavigationController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C9F8E61C4C584F00181DCC /* NavigationController.swift in Sources */,
 				271313411C4C4D6C002FF628 /* SettingsTableViewManager.swift in Sources */,
 				2713133D1C4C2F30002FF628 /* CircleButton.swift in Sources */,
 				271313441C4C4D81002FF628 /* SettingsTableViewCell.swift in Sources */,
@@ -334,8 +344,14 @@
 			files = (
 				271313421C4C4D6C002FF628 /* SettingsTableViewManager.swift in Sources */,
 				271313481C4C4F84002FF628 /* CircleTransitionAnimator.swift in Sources */,
+				27C9F8E31C4C54F700181DCC /* MainTableViewCell.swift in Sources */,
+				27C9F8E41C4C54FB00181DCC /* CircleButton.swift in Sources */,
+				27C9F8E21C4C54F400181DCC /* MainTableViewManager.swift in Sources */,
 				271313181C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift in Sources */,
 				271313451C4C4D81002FF628 /* SettingsTableViewCell.swift in Sources */,
+				27C9F8E71C4C584F00181DCC /* NavigationController.swift in Sources */,
+				27C9F8E01C4C54E000181DCC /* MainViewController.swift in Sources */,
+				27C9F8E11C4C54EF00181DCC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +570,7 @@
 				271313291C4C25A9002FF628 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2713132A1C4C25A9002FF628 /* Build configuration list for PBXNativeTarget "DeepThoughtsSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +579,7 @@
 				2713132C1C4C25A9002FF628 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2713132D1C4C25A9002FF628 /* Build configuration list for PBXNativeTarget "DeepThoughtsSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +588,7 @@
 				2713132F1C4C25A9002FF628 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
