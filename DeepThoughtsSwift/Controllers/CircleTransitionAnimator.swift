@@ -1,9 +1,13 @@
 //
-//  SettingsViewControllers.swift
+//  CircleTransitionAnimator.swift
 //  DeepThoughtsSwift
 //
 //  Created by Jeremiah Kistler on 1/17/16.
 //  Copyright © 2016 Jeremiah Kistler. All rights reserved.
 //
 
-import Foundation
+import Cocoa
+
+class CircleTransitionAnimator: UIViewControllerAnimatedTransitioning {
+
+}

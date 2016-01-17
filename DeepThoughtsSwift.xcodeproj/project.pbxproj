@@ -14,11 +14,17 @@
 		271313181C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313171C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift */; };
 		271313231C4C25A9002FF628 /* DeepThoughtsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313221C4C25A9002FF628 /* DeepThoughtsSwiftUITests.swift */; };
 		271313351C4C2795002FF628 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313341C4C2795002FF628 /* MainViewController.swift */; };
-		271313371C4C2801002FF628 /* SettingsViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313361C4C2801002FF628 /* SettingsViewControllers.swift */; };
+		271313371C4C2801002FF628 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313361C4C2801002FF628 /* SettingsViewController.swift */; };
 		271313391C4C2A55002FF628 /* MainTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313381C4C2A55002FF628 /* MainTableViewManager.swift */; };
 		2713133B1C4C2C4B002FF628 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2713133A1C4C2C4B002FF628 /* MainTableViewCell.swift */; };
 		2713133D1C4C2F30002FF628 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2713133C1C4C2F30002FF628 /* CircleButton.swift */; };
 		2713133F1C4C3458002FF628 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2713133E1C4C3458002FF628 /* FakeData.swift */; };
+		271313411C4C4D6C002FF628 /* SettingsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313401C4C4D6C002FF628 /* SettingsTableViewManager.swift */; };
+		271313421C4C4D6C002FF628 /* SettingsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313401C4C4D6C002FF628 /* SettingsTableViewManager.swift */; };
+		271313441C4C4D81002FF628 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313431C4C4D81002FF628 /* SettingsTableViewCell.swift */; };
+		271313451C4C4D81002FF628 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313431C4C4D81002FF628 /* SettingsTableViewCell.swift */; };
+		271313471C4C4F84002FF628 /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */; };
+		271313481C4C4F84002FF628 /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +58,14 @@
 		271313221C4C25A9002FF628 /* DeepThoughtsSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepThoughtsSwiftUITests.swift; sourceTree = "<group>"; };
 		271313241C4C25A9002FF628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		271313341C4C2795002FF628 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = MainView/MainViewController.swift; sourceTree = "<group>"; };
-		271313361C4C2801002FF628 /* SettingsViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewControllers.swift; path = SettingsView/SettingsViewControllers.swift; sourceTree = "<group>"; };
+		271313361C4C2801002FF628 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = SettingsView/SettingsViewController.swift; sourceTree = "<group>"; };
 		271313381C4C2A55002FF628 /* MainTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewManager.swift; path = MainView/MainTableViewManager.swift; sourceTree = "<group>"; };
 		2713133A1C4C2C4B002FF628 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewCell.swift; path = MainView/MainTableViewCell.swift; sourceTree = "<group>"; };
 		2713133C1C4C2F30002FF628 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		2713133E1C4C3458002FF628 /* FakeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
+		271313401C4C4D6C002FF628 /* SettingsTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewManager.swift; path = SettingsView/SettingsTableViewManager.swift; sourceTree = "<group>"; };
+		271313431C4C4D81002FF628 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewCell.swift; path = SettingsView/SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleTransitionAnimator.swift; path = Controllers/CircleTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +150,9 @@
 		271313301C4C26CE002FF628 /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
-				271313361C4C2801002FF628 /* SettingsViewControllers.swift */,
+				271313361C4C2801002FF628 /* SettingsViewController.swift */,
+				271313401C4C4D6C002FF628 /* SettingsTableViewManager.swift */,
+				271313431C4C4D81002FF628 /* SettingsTableViewCell.swift */,
 			);
 			name = SettingsView;
 			sourceTree = "<group>";
@@ -159,6 +170,7 @@
 		271313321C4C26EB002FF628 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -303,13 +315,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271313411C4C4D6C002FF628 /* SettingsTableViewManager.swift in Sources */,
 				2713133D1C4C2F30002FF628 /* CircleButton.swift in Sources */,
+				271313441C4C4D81002FF628 /* SettingsTableViewCell.swift in Sources */,
 				271313351C4C2795002FF628 /* MainViewController.swift in Sources */,
 				2713133F1C4C3458002FF628 /* FakeData.swift in Sources */,
 				271313391C4C2A55002FF628 /* MainTableViewManager.swift in Sources */,
 				271313031C4C25A8002FF628 /* AppDelegate.swift in Sources */,
+				271313471C4C4F84002FF628 /* CircleTransitionAnimator.swift in Sources */,
 				2713133B1C4C2C4B002FF628 /* MainTableViewCell.swift in Sources */,
-				271313371C4C2801002FF628 /* SettingsViewControllers.swift in Sources */,
+				271313371C4C2801002FF628 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +332,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271313421C4C4D6C002FF628 /* SettingsTableViewManager.swift in Sources */,
+				271313481C4C4F84002FF628 /* CircleTransitionAnimator.swift in Sources */,
 				271313181C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift in Sources */,
+				271313451C4C4D81002FF628 /* SettingsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
