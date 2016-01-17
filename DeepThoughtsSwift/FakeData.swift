@@ -9,7 +9,7 @@
 import Foundation
 
 public struct FakeData {
-    public let titles = ["Is there another word for 'synonym'?", "Is there another word for 'synonym'?1 alkdjf alskdjf alskdjflas dflkasd jflkasdj flka sdflk asjdflkjasdf asdfklj alksdjfkjsadf kasdjf asdkl;fjlk asdlkfjjsdlkjf adkfj kajsdf l;k", "Is there another"]
+    public let titles = ["Is there another word for 'synonym'?", "I need this one to be kinda long so I can see if the font size calculation is right. I dont think it is. For some reason it is over estimating the size of the text", "Here is another"]
     
     public let categories = ["Random thoughts", "Random thoughts1", "Random thoughts2"]
 }
