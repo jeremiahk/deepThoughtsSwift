@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="132" id="yDP-P6-1AK" customClass="MainTableViewCell" customModule="DeepThoughtsSwift" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainCell" rowHeight="132" id="yDP-P6-1AK" customClass="MainTableViewCell" customModule="DeepThoughtsSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yDP-P6-1AK" id="t2P-hD-4rd">
@@ -57,6 +57,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qdi-iz-Ger" id="zga-Qy-FGw"/>
+                                    <outlet property="delegate" destination="qdi-iz-Ger" id="Igx-IW-UI0"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqQ-bx-EaD" customClass="CircleButton" customModule="DeepThoughtsSwift" customModuleProvider="target">
                                 <rect key="frame" x="530" y="0.0" width="70" height="70"/>
@@ -83,6 +87,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUI-97-I6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="qdi-iz-Ger" customClass="MainTableViewManager" customModule="DeepThoughtsSwift" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="48" y="249"/>
         </scene>
