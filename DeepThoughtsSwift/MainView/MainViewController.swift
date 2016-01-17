@@ -6,4 +6,11 @@
 //  Copyright © 2016 Jeremiah Kistler. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MainViewController: UIViewController {
+    
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    
+}
