@@ -84,16 +84,22 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqQ-bx-EaD" customClass="CircleButton" customModule="DeepThoughtsSwift" customModuleProvider="target">
                                 <rect key="frame" x="536" y="0.0" width="64" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="cYr-e3-OnR"/>
                                     <constraint firstAttribute="height" constant="64" id="xc0-Iu-CXA"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="Pan-QE-6K1" kind="show" identifier="circleSegue" id="a0e-Ol-zVL"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490570068359" green="0.93725490570068359" blue="0.95686274766921997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Q5s-sP-pls" firstAttribute="top" secondItem="kNn-E9-AV9" secondAttribute="bottom" id="7Se-qu-GtD"/>
                             <constraint firstItem="uqQ-bx-EaD" firstAttribute="top" secondItem="9Rp-cY-UQs" secondAttribute="bottom" id="W3c-bU-qeb"/>
@@ -106,7 +112,7 @@
                     <navigationItem key="navigationItem" id="1cQ-Jp-Eih"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="circleButton" destination="uqQ-bx-EaD" id="6Tm-KY-Zwb"/>
+                        <outlet property="circleButton" destination="uqQ-bx-EaD" id="jkW-1Z-lLC"/>
                         <outlet property="tableView" destination="kNn-E9-AV9" id="gQ0-UJ-Gce"/>
                     </connections>
                 </viewController>
@@ -127,15 +133,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-LO-jF2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-LO-jF2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainCell" id="sN1-Oy-FMd" customClass="SettingsTableViewCell" customModule="DeepThoughtsSwift" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainCell" id="sN1-Oy-FMd" customClass="SettingsTableViewCell" customModule="DeepThoughtsSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sN1-Oy-FMd" id="kdw-hD-XQQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnM-Sx-mKb">
@@ -157,6 +163,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LD7-lU-jCA" id="BgG-cU-yst"/>
+                                    <outlet property="delegate" destination="LD7-lU-jCA" id="xBy-cy-8tc"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1z-BW-Lsz" customClass="CircleButton" customModule="DeepThoughtsSwift" customModuleProvider="target">
                                 <rect key="frame" x="536" y="0.0" width="64" height="64"/>
@@ -164,12 +174,17 @@
                                     <constraint firstAttribute="width" constant="64" id="REO-Q3-Kmu"/>
                                     <constraint firstAttribute="height" constant="64" id="SdW-ig-7Zu"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="touchUpInside:" destination="Pan-QE-6K1" eventType="touchUpInside" id="P1V-jP-Vpz"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="idL-IX-BQ7" firstAttribute="top" secondItem="Iba-LO-jF2" secondAttribute="bottom" id="CFs-VB-lRA"/>
                             <constraint firstAttribute="trailing" secondItem="U1z-BW-Lsz" secondAttribute="trailing" id="DcJ-oD-ZeR"/>
@@ -181,11 +196,12 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="circleButton" destination="U1z-BW-Lsz" id="oDc-SY-zfI"/>
+                        <outlet property="circleButton" destination="U1z-BW-Lsz" id="K4W-N4-3fC"/>
                         <outlet property="tableView" destination="Iba-LO-jF2" id="zni-Wp-9hP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNn-IA-UJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="LD7-lU-jCA" customClass="SettingsTableViewManager" customModule="DeepThoughtsSwift" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="776" y="249"/>
         </scene>
