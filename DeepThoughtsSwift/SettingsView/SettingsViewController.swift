@@ -13,10 +13,16 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var circleButton: CircleButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
-        self.view.backgroundColor = UIColor.blackColor()
+        circleButton.shrink()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        circleButton.animate()
     }
     
     @IBAction func touchUpInside(sender: CircleButton) {
