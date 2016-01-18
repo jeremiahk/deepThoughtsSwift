@@ -18,7 +18,7 @@ class SettingsTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fakeData.titles.count
+        return fakeData.categories.count
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
