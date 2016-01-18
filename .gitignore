@@ -25,3 +25,7 @@ xcuserdata
 *.moved-aside
 *.xcuserstate
 
+## CocoaPods
+Pods/
+Podfile.lock
+DeepTHoughtsSwift.xcworkspace/
