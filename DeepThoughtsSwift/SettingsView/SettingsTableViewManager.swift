@@ -9,16 +9,25 @@
 import UIKit
 
 class SettingsTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
-    let fakeData = FakeData()
+    private let cells: [CellConfiguratorType] = {
+        var cells: [CellConfiguratorType] = []
+        
+        for thought in FakeData().thoughts {
+            cells.append(CellConfigurator<SettingsTableViewCell>(viewData: SettingsTableViewCellData(category: thought.category)))
+        }
+        
+        return cells
+    }()
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("mainCell") as! SettingsTableViewCell
-        
+        let cellConfigurator = cells[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellConfigurator.reuseIdentifier, forIndexPath: indexPath)
+        cellConfigurator.updateCell(cell)
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fakeData.categories.count
+        return cells.count
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
