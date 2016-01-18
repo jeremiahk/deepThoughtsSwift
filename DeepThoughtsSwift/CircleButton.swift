@@ -9,6 +9,8 @@
 import UIKit
 
 public class CircleButton: UIButton {
+    public var buttonColor: UIColor!
+    
     public var backgroundSize: CGRect {
         get {
             let offset = self.frame.size.height * 0.3
@@ -21,7 +23,7 @@ public class CircleButton: UIButton {
         
         let path = UIBezierPath(arcCenter: center, radius: rect.size.width * 0.15, startAngle: 0.0, endAngle: 6.28319, clockwise: true)
         
-        self.backgroundColor?.setFill()
+        self.buttonColor?.setFill()
         path.fill()
     }
     
