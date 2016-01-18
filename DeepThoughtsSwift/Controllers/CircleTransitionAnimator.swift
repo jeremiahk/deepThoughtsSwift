@@ -19,55 +19,68 @@ class CircleTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning 
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
         
-        // Grab the viewControllers and take a snapshot of each. 
+        // Grab the viewControllers and take a snapshot of each.
         if  let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as? MainViewController,
             let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as? SettingsViewController,
             let containerView = transitionContext.containerView() {
         
-                let fromViewSnapshot = fromViewController.view.resizableSnapshotViewFromRect(fromViewController.view.frame, afterScreenUpdates: true, withCapInsets: UIEdgeInsetsZero)
-                let toViewSnapshot = toViewController.view.resizableSnapshotViewFromRect(toViewController.view.frame, afterScreenUpdates: true, withCapInsets: UIEdgeInsetsZero)
-            
-                // ContainerView will hold the views during the transition
-                containerView.addSubview(fromViewSnapshot)
-                    
-                let button = fromViewController.circleButton
-            
-                // circleView is the view that the mask will be applied to.
-                let circleView = UIView(frame: containerView.frame)
-                circleView.backgroundColor = toViewController.view.backgroundColor
-                containerView.addSubview(circleView)
+            let button = fromViewController.circleButton
                 
-                let circleMaskPathInitial = UIBezierPath.init(ovalInRect: button.backgroundSize)
-                let finalPoint = CGPoint(x: button.center.x, y: button.center.y - CGRectGetHeight(toViewController.view.bounds))
-                let radius = sqrt(finalPoint.x * finalPoint.x) + (finalPoint.y * finalPoint.y)
-                let circleMaskPathFinal = UIBezierPath.init(ovalInRect: CGRectInset(button.frame, -radius, -radius))
+            createAnimation(fromViewController, toViewController: toViewController, containerView: containerView, button: button)
                 
-                let maskLayer = CAShapeLayer()
-                maskLayer.path = circleMaskPathFinal.CGPath
-                circleView.layer.mask = maskLayer
+        } else if let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as? SettingsViewController,
+            let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as? MainViewController,
+            let containerView = transitionContext.containerView() {
                 
-                let maskLayerAnimation = CABasicAnimation(keyPath: "path")
-                maskLayerAnimation.fromValue = circleMaskPathInitial.CGPath
-                maskLayerAnimation.toValue = circleMaskPathFinal.CGPath
-                maskLayerAnimation.duration = self.transitionDuration(transitionContext)
-                maskLayerAnimation.delegate = self
-                maskLayer.addAnimation(maskLayerAnimation, forKey: "path")
+            let button = fromViewController.circleButton
                 
-                // Add the toViewControllerSnapshot to the circle view and animate it
-                circleView.addSubview(toViewSnapshot)
-                
-                toViewSnapshot.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.5, 0.5)
-                toViewSnapshot.center = button.center
-                toViewSnapshot.alpha = 0
-                
-                UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: {
-                    toViewSnapshot.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 1.0)
-                    toViewSnapshot.center = containerView.center
-                    toViewSnapshot.alpha = 1.0
-                }, completion: { _ in
-                    containerView.addSubview(toViewController.view)
-                })
+            createAnimation(fromViewController, toViewController: toViewController, containerView: containerView, button: button)
         }
+    }
+    
+    private func createAnimation(fromViewController: UIViewController, toViewController: UIViewController, containerView: UIView, button: CircleButton) {
+        let fromViewSnapshot = fromViewController.view.resizableSnapshotViewFromRect(fromViewController.view.frame, afterScreenUpdates: true, withCapInsets: UIEdgeInsetsZero)
+        let toViewSnapshot = toViewController.view.resizableSnapshotViewFromRect(toViewController.view.frame, afterScreenUpdates: true, withCapInsets: UIEdgeInsetsZero)
+        
+        // ContainerView will hold the views during the transition
+        containerView.addSubview(fromViewSnapshot)
+        
+        // circleView is the view that the mask will be applied to.
+        let circleView = UIView(frame: containerView.frame)
+        circleView.backgroundColor = toViewController.view.backgroundColor
+        containerView.addSubview(circleView)
+        
+        
+        let circleMaskPathInitial = UIBezierPath(ovalInRect: button.backgroundSize)
+        let finalPoint = CGPoint(x: button.center.x, y: button.center.y - CGRectGetHeight(toViewController.view.bounds))
+        let radius = sqrt((finalPoint.x * finalPoint.x) + (finalPoint.y * finalPoint.y))
+        let circleMaskPathFinal = UIBezierPath(ovalInRect: CGRectInset(button.frame, -radius, -radius))
+        
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = circleMaskPathFinal.CGPath
+        circleView.layer.mask = maskLayer
+        
+        let maskLayerAnimation = CABasicAnimation(keyPath: "path")
+        maskLayerAnimation.fromValue = circleMaskPathInitial.CGPath
+        maskLayerAnimation.toValue = circleMaskPathFinal.CGPath
+        maskLayerAnimation.duration = self.transitionDuration(transitionContext)
+        maskLayerAnimation.delegate = self
+        maskLayer.addAnimation(maskLayerAnimation, forKey: "path")
+        
+        // Add the toViewControllerSnapshot to the circle view and animate it
+        circleView.addSubview(toViewSnapshot)
+        
+        toViewSnapshot.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.5, 0.5)
+        toViewSnapshot.center = button.center
+        toViewSnapshot.alpha = 0
+        
+        UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: {
+            toViewSnapshot.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 1.0)
+            toViewSnapshot.center = containerView.center
+            toViewSnapshot.alpha = 1.0
+        }, completion: { _ in
+            containerView.addSubview(toViewController.view)
+        })
     }
     
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
