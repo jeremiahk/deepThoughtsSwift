@@ -38,6 +38,7 @@
 		27C9F8E71C4C584F00181DCC /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9F8E51C4C584F00181DCC /* NavigationController.swift */; };
 		27C9F8E81C4C5D2D00181DCC /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2713133E1C4C3458002FF628 /* FakeData.swift */; };
 		27ED93B71C4DCE7B00A73A2C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED93B61C4DCE7B00A73A2C /* UIColor.swift */; };
+		27ED93B81C4DD24000A73A2C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED93B61C4DCE7B00A73A2C /* UIColor.swift */; };
 		280438AD7436AE5122600212 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE9D03B3DAC3B25FFACE6C4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -441,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27950E871C4C995000544741 /* CellConfigurator.swift in Sources */,
+				27ED93B81C4DD24000A73A2C /* UIColor.swift in Sources */,
 				271313421C4C4D6C002FF628 /* SettingsTableViewManager.swift in Sources */,
 				271313481C4C4F84002FF628 /* CircleTransitionAnimator.swift in Sources */,
 				27C9F8E31C4C54F700181DCC /* MainTableViewCell.swift in Sources */,
