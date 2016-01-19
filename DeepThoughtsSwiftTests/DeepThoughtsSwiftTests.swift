@@ -2,9 +2,6 @@
 //  DeepThoughtsSwiftTests.swift
 //  DeepThoughtsSwiftTests
 //
-//  Created by Jeremiah Kistler on 1/17/16.
-//  Copyright © 2016 Jeremiah Kistler. All rights reserved.
-//
 
 import XCTest
 @testable import DeepThoughtsSwift
