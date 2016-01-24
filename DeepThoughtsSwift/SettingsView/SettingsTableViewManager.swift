@@ -30,4 +30,18 @@ class SettingsTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSo
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 88
     }
+    
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView(frame: tableView.frame)
+        
+        let blackView = UIView(frame: tableView.frame)
+        blackView.backgroundColor = UIColor.blackColor()
+        view.addSubview(blackView)
+        
+        return view
+    }
 }
