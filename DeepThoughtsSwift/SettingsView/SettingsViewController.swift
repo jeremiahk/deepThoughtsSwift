@@ -38,6 +38,10 @@ class SettingsViewController: UIViewController {
         super.viewDidAppear(animated)
         
         circleButton.animate()
+        
+        for cell in tableView.visibleCells {
+            (cell as! SettingsTableViewCell).addLayer()
+        }
     }
     
     @IBAction func touchUpInside(sender: CircleButton) {

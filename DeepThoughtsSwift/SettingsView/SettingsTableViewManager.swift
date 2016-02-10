@@ -6,6 +6,14 @@
 import UIKit
 
 class SettingsTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
+    var tableView: UITableView!
+    
+    convenience init(tableView: UITableView) {
+        self.init()
+        
+        self.tableView = tableView
+    }
+    
     private let cells: [CellConfiguratorType] = {
         var cells: [CellConfiguratorType] = []
         
@@ -28,7 +36,19 @@ class SettingsTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        test(tableView)
         return 88
+    }
+    
+    func test(tableView: UITableView) {
+        let topView = UIView()
+        topView.translatesAutoresizingMaskIntoConstraints = false
+        topView.backgroundColor = UIColor.blackColor()
+        tableView.addSubview(topView)
+        
+        tableView.addConstraint(NSLayoutConstraint(item: topView, attribute: .Bottom, relatedBy: .Equal, toItem: tableView, attribute: .Top, multiplier: 1, constant: 0))
+        tableView.addConstraint(NSLayoutConstraint(item: topView, attribute: .Width, relatedBy: .Equal, toItem: tableView, attribute: .Width, multiplier: 1, constant: 0))
+        tableView.addConstraint(NSLayoutConstraint(item: topView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 0, constant: 500))
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
