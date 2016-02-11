@@ -39,6 +39,9 @@
 		27C9F8E81C4C5D2D00181DCC /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2713133E1C4C3458002FF628 /* FakeData.swift */; };
 		27ED93B71C4DCE7B00A73A2C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED93B61C4DCE7B00A73A2C /* UIColor.swift */; };
 		27ED93B81C4DD24000A73A2C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED93B61C4DCE7B00A73A2C /* UIColor.swift */; };
+		27F2C2F01C6C258C00FC06D2 /* CoreText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2C2EF1C6C258C00FC06D2 /* CoreText.swift */; };
+		27F2C2F11C6C258C00FC06D2 /* CoreText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2C2EF1C6C258C00FC06D2 /* CoreText.swift */; };
+		27F2C2F41C6C25B900FC06D2 /* CoreTextTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2C2F21C6C25B900FC06D2 /* CoreTextTest.swift */; };
 		280438AD7436AE5122600212 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE9D03B3DAC3B25FFACE6C4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +89,8 @@
 		27950E851C4C995000544741 /* CellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellConfigurator.swift; path = UtilityFiles/CellConfigurator.swift; sourceTree = "<group>"; };
 		27C9F8E51C4C584F00181DCC /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		27ED93B61C4DCE7B00A73A2C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = UtilityFiles/UIColor.swift; sourceTree = "<group>"; };
+		27F2C2EF1C6C258C00FC06D2 /* CoreText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreText.swift; path = UtilityFiles/CoreText.swift; sourceTree = "<group>"; };
+		27F2C2F21C6C25B900FC06D2 /* CoreTextTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreTextTest.swift; path = "Utility Files/CoreTextTest.swift"; sourceTree = "<group>"; };
 		D4CB8ABFB097B4B9CC0100C4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FEE9D03B3DAC3B25FFACE6C4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -159,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				271313171C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift */,
+				27F2C2F21C6C25B900FC06D2 /* CoreTextTest.swift */,
 				271313191C4C25A9002FF628 /* Info.plist */,
 			);
 			path = DeepThoughtsSwiftTests;
@@ -217,6 +223,7 @@
 				27950E831C4C989600544741 /* GCDQueue.swift */,
 				27950E851C4C995000544741 /* CellConfigurator.swift */,
 				27ED93B61C4DCE7B00A73A2C /* UIColor.swift */,
+				27F2C2EF1C6C258C00FC06D2 /* CoreText.swift */,
 			);
 			name = UtilityFiles;
 			sourceTree = "<group>";
@@ -420,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F2C2F01C6C258C00FC06D2 /* CoreText.swift in Sources */,
 				27C9F8E61C4C584F00181DCC /* NavigationController.swift in Sources */,
 				27ED93B71C4DCE7B00A73A2C /* UIColor.swift in Sources */,
 				271313411C4C4D6C002FF628 /* SettingsTableViewManager.swift in Sources */,
@@ -441,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F2C2F11C6C258C00FC06D2 /* CoreText.swift in Sources */,
 				27950E871C4C995000544741 /* CellConfigurator.swift in Sources */,
 				27ED93B81C4DD24000A73A2C /* UIColor.swift in Sources */,
 				271313421C4C4D6C002FF628 /* SettingsTableViewManager.swift in Sources */,
@@ -451,6 +460,7 @@
 				271313181C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift in Sources */,
 				271313451C4C4D81002FF628 /* SettingsTableViewCell.swift in Sources */,
 				27C9F8E71C4C584F00181DCC /* NavigationController.swift in Sources */,
+				27F2C2F41C6C25B900FC06D2 /* CoreTextTest.swift in Sources */,
 				27C9F8E01C4C54E000181DCC /* MainViewController.swift in Sources */,
 				27C9F8E81C4C5D2D00181DCC /* FakeData.swift in Sources */,
 				27950E881C4C995A00544741 /* GCDQueue.swift in Sources */,
