@@ -1,5 +1,5 @@
 //
-//  CoreText.swift
+//  CoreTextTest.swift
 //  DeepThoughtsSwift
 //
 //  Created by Jeremiah Kistler on 2/10/16.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+func test() {
+    
+}
