@@ -5,7 +5,11 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+protocol hasCircleButton {
+    func getCircleButton() -> CircleButton
+}
+
+class MainViewController: UIViewController, hasCircleButton {
     
     @IBOutlet weak var circleButton: CircleButton!
     @IBOutlet weak var tableView: UITableView!
@@ -20,5 +24,9 @@ class MainViewController: UIViewController {
         super.viewDidAppear(animated)
         
         circleButton.animate()
+    }
+    
+    func getCircleButton() -> CircleButton {
+        return circleButton
     }
 }

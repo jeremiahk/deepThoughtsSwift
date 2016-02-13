@@ -15,22 +15,13 @@ class CircleTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning 
 
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-
+        
         // Grab the viewControllers and take a snapshot of each.
-        if  let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as? MainViewController,
-            let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as? SettingsViewController,
-            let containerView = transitionContext.containerView() {
-
-            let button = fromViewController.circleButton
-
-            createAnimation(fromViewController, toViewController: toViewController, containerView: containerView, button: button)
-
-        } else if let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as? SettingsViewController,
-            let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as? MainViewController,
-            let containerView = transitionContext.containerView() {
-
-            let button = fromViewController.circleButton
-
+        if  let fromViewController  = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey),
+            let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey),
+            let containerView = transitionContext.containerView(),
+            let button = (fromViewController as? hasCircleButton)?.getCircleButton() {
+                
             createAnimation(fromViewController, toViewController: toViewController, containerView: containerView, button: button)
         }
     }

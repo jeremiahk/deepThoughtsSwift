@@ -5,7 +5,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, hasCircleButton {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var circleButton: CircleButton!
@@ -46,5 +46,9 @@ class SettingsViewController: UIViewController {
     
     @IBAction func touchUpInside(sender: CircleButton) {
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func getCircleButton() -> CircleButton {
+        return circleButton
     }
 }
