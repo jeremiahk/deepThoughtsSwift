@@ -14,77 +14,24 @@ struct SettingsTableViewCellData {
 }
 
 class SettingsTableViewCell: UITableViewCell {
-    @IBOutlet weak var categoryLabel: UILabel!
-    
+    private var textMask: TextMask?
     func updateWithViewData(viewData: SettingsTableViewCellData) {
-        categoryLabel.text = viewData.category
+        addTextLayer(viewData.category)
     }
     
-    func addLayer() {
-        let shapeLayer = CAShapeLayer()
-        let testPath = UIBezierPath(rect: self.contentView.frame)
-        
-        let testFont = UIFont(name: "HelveticaNeue-Light", size: 15)
-        let test = NSAttributedString(string: "This is a good test", attributes: [NSFontAttributeName: testFont!])
-        let testPath2 = CGPathFromAttributedString(test)
-        
-        testPath.appendPath(testPath2)
-        
-        shapeLayer.path = testPath.CGPath
-        shapeLayer.fillRule = kCAFillRuleEvenOdd
-        
-        self.layer.mask = shapeLayer
-    }
-    
-    private func CGPathFromAttributedString(string: NSAttributedString) -> UIBezierPath {
-        // This is the final path you will return
-        let letters = CGPathCreateMutable()
-        
-        // Create the line so we can pull out the Run
-        let line = CTLineCreateWithAttributedString(string)
-        
-        // Returns a run array from the whole line.
-        let runArray: [AnyObject] = CTLineGetGlyphRuns(line) as [AnyObject]
-        
-        // We only need the first run.
-        let run: CTRun = runArray[0] as! CTRun
-        
-        // Get the font used in the string
-        let attributes = CTRunGetAttributes(run) as Dictionary
-        let font = attributes[kCTFontAttributeName] as! CTFont
-        
-        // Count the number of charicters in the run
-        let glyphCount = CTRunGetGlyphCount(run) as Int
-        
-        // Loop through the run and get the size of each.
-        for index in 0..<glyphCount {
-            // Glyph with store that glyph
-            var glyph = CGGlyph()
+    func addTextLayer(text: String) {
+        if let textMask = textMask {
+            let testFont = UIFont(name: "HelveticaNeue-Light", size: 17)
+            let test = NSAttributedString(string: text, attributes: [NSFontAttributeName: testFont!])
+            textMask.text = test
+            self.layer.mask = textMask.shapeLayer
+        } else {
+            let testFont = UIFont(name: "HelveticaNeue-Light", size: 17)
+            let test = NSAttributedString(string: text, attributes: [NSFontAttributeName: testFont!])
             
-            // Positon store the position of the glyph
-            var position = CGPoint()
-            
-            let range = CFRange(location: index, length: 1)
-            
-            CTRunGetGlyphs(run, range, &glyph)
-            CTRunGetPositions(run, range, &position)
-            
-            let letter = CTFontCreatePathForGlyph(font, glyph, nil)
-            
-            var xPositionTransform = CGAffineTransformMakeTranslation(position.x, position.y)
-            
-            CGPathAddPath(letters, &xPositionTransform, letter)
+            let offset = CGRect(x: 0.0, y: 0.0, width: 40, height: self.contentView.frame.height / 2)
+            self.textMask = TextMask(fromAttributedString: test, WithFrame: self.contentView.frame, offset: offset)
+            self.layer.mask = textMask!.shapeLayer
         }
-        // Flip the letters since coreText uses an alternate origin position
-        var mirrorTransform = CGAffineTransformMakeScale(1, -1)
-        let mirroredLetters = CGPathCreateCopyByTransformingPath(letters, &mirrorTransform)
-        
-        // Move the letters back down after fliping them
-        let size = CGPathGetBoundingBox(mirroredLetters)
-        var transform = CGAffineTransformMakeTranslation(0, size.height)
-        let finalLetters = CGPathCreateCopyByTransformingPath(mirroredLetters, &transform)
-        
-        let path = UIBezierPath(CGPath: finalLetters!)
-        return path
     }
 }
