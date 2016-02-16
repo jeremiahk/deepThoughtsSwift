@@ -11,7 +11,6 @@
 		271313081C4C25A8002FF628 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271313061C4C25A8002FF628 /* Main.storyboard */; };
 		2713130A1C4C25A8002FF628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 271313091C4C25A8002FF628 /* Assets.xcassets */; };
 		2713130D1C4C25A8002FF628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2713130B1C4C25A8002FF628 /* LaunchScreen.storyboard */; };
-		271313181C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313171C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift */; };
 		271313231C4C25A9002FF628 /* DeepThoughtsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313221C4C25A9002FF628 /* DeepThoughtsSwiftUITests.swift */; };
 		271313351C4C2795002FF628 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313341C4C2795002FF628 /* MainViewController.swift */; };
 		271313371C4C2801002FF628 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313361C4C2801002FF628 /* SettingsViewController.swift */; };
@@ -71,7 +70,6 @@
 		2713130C1C4C25A8002FF628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2713130E1C4C25A8002FF628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = SupportingFiles/Info.plist; sourceTree = "<group>"; };
 		271313131C4C25A9002FF628 /* DeepThoughtsSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepThoughtsSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		271313171C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepThoughtsSwiftTests.swift; sourceTree = "<group>"; };
 		271313191C4C25A9002FF628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2713131E1C4C25A9002FF628 /* DeepThoughtsSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepThoughtsSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		271313221C4C25A9002FF628 /* DeepThoughtsSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepThoughtsSwiftUITests.swift; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				2755FE941C6D6C6E008F7B2A /* UtilityFiles */,
-				271313171C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift */,
 				271313191C4C25A9002FF628 /* Info.plist */,
 			);
 			path = DeepThoughtsSwiftTests;
@@ -465,7 +462,6 @@
 				27C9F8E31C4C54F700181DCC /* MainTableViewCell.swift in Sources */,
 				27C9F8E41C4C54FB00181DCC /* CircleButton.swift in Sources */,
 				27C9F8E21C4C54F400181DCC /* MainTableViewManager.swift in Sources */,
-				271313181C4C25A9002FF628 /* DeepThoughtsSwiftTests.swift in Sources */,
 				271313451C4C4D81002FF628 /* SettingsTableViewCell.swift in Sources */,
 				27C9F8E71C4C584F00181DCC /* NavigationController.swift in Sources */,
 				27F2C2F41C6C25B900FC06D2 /* TextMaskTest.swift in Sources */,
@@ -630,7 +626,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DeepThoughtsSwiftTests/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = DeepThoughtsSwift/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwk.DeepThoughtsSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -642,7 +638,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DeepThoughtsSwiftTests/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = DeepThoughtsSwift/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwk.DeepThoughtsSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -653,7 +649,7 @@
 		2713132E1C4C25A9002FF628 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = DeepThoughtsSwiftUITests/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = DeepThoughtsSwift/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwk.DeepThoughtsSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -665,7 +661,7 @@
 		2713132F1C4C25A9002FF628 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = DeepThoughtsSwiftUITests/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = DeepThoughtsSwift/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwk.DeepThoughtsSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

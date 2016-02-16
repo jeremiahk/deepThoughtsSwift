@@ -21,8 +21,30 @@ class TextMaskTest: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testThatItInitialisesWithCAShapeLayer() {
+        // Given
+        let font = UIFont(name: "HelveticaNeue-Light", size: 17)
+        let testString = NSAttributedString(string: "This is a good test", attributes: [NSFontAttributeName: font!])
+        
+        // When
+        let tm = TextMask(fromAttributedString: testString)
+        
+        // That
+        XCTAssertNotNil(tm.mask, "TextMask did not initialise with a CAShapeLayer")
     }
+    
+//    func testThatItReturnsTypeCAShapeLayer() {
+//        // Given
+//        let font = UIFont(name: "HelveticaNeue-Light", size: 17)
+//        let testString = NSAttributedString(string: "This is a good test", attributes: [NSFontAttributeName: font!])
+//        
+//        let tm = TextMask(fromAttributedString: testString)
+//        
+//        // When
+//        let mask = tm.generateMask()
+//        
+//        // That
+//        XCTAssertNotNil(mask, "TestMask did not return the mask")
+//    }
+    
 }
