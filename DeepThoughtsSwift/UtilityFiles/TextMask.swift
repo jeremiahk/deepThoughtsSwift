@@ -10,6 +10,7 @@ import UIKit
 
 public class TextMask: NSObject {
     private var frame: CGRect!
+    private var offset: CGRect?
     public var text: NSAttributedString! {
         didSet {
             generateMask()
@@ -18,9 +19,10 @@ public class TextMask: NSObject {
     
     public private(set) var shapeLayer: CAShapeLayer!
     
-    init(fromAttributedString text: NSAttributedString, AndFrame frame: CGRect) {
+    init(fromAttributedString text: NSAttributedString, WithFrame frame: CGRect, offset: CGRect?) {
         self.text = text
         self.frame = frame
+        self.offset = offset
         
         super.init()
         
@@ -78,15 +80,35 @@ public class TextMask: NSObject {
 
             CGPathAddPath(letters, &xPositionTransform, letter)
         }
-        // Flip the letters since coreText uses an alternate origin position
-        var mirrorTransform = CGAffineTransformMakeScale(1, -1)
-        let mirroredLetters = CGPathCreateCopyByTransformingPath(letters, &mirrorTransform)
-
-        // Move the letters back down after fliping them
-        let size = CGPathGetBoundingBox(mirroredLetters)
-        var transform = CGAffineTransformMakeTranslation(0, size.height)
-        let finalLetters = CGPathCreateCopyByTransformingPath(mirroredLetters, &transform)
         
-        return UIBezierPath(CGPath: finalLetters!)
+        // Flip the letters since coreText uses an alternate origin position
+        let finalLetters = flipPathVertically(letters)
+        
+        // Move them by the offset
+        if offset != nil {
+            let lettersWithOffset = applyOffset(finalLetters)
+            return UIBezierPath(CGPath: lettersWithOffset)
+        }
+        
+        return UIBezierPath(CGPath: finalLetters)
+    }
+    
+    private func flipPathVertically(path: CGPath) -> CGPath {
+        // Flip the path since coreText uses an alternate origin position
+        var mirrorTransform = CGAffineTransformMakeScale(1, -1)
+        let mirroredPath = CGPathCreateCopyByTransformingPath(path, &mirrorTransform)
+        
+        // Move the path back down after fliping it
+        let size = CGPathGetBoundingBox(mirroredPath)
+        var transform = CGAffineTransformMakeTranslation(0, size.height)
+        return CGPathCreateCopyByTransformingPath(mirroredPath, &transform)!
+    }
+    
+    private func applyOffset(path: CGPath) -> CGPath {
+        precondition(offset != nil, "This function can only be called if offset is not nil")
+        
+        let boudingRec = CGPathGetBoundingBox(path)
+        var transform = CGAffineTransformMakeTranslation(offset!.width, (offset!.height - boudingRec.height / 2))
+        return CGPathCreateCopyByTransformingPath(path, &transform)!
     }
 }
