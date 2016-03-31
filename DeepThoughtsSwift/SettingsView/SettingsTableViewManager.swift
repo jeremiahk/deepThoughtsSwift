@@ -28,6 +28,11 @@ class SettingsTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSo
         let cellConfigurator = cells[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier(cellConfigurator.reuseIdentifier, forIndexPath: indexPath)
         cellConfigurator.updateCell(cell)
+        
+        if indexPath.row == 8 {
+            (cell as! SettingsTableViewCell).removeGray()
+        }
+        
         return cell
     }
     
