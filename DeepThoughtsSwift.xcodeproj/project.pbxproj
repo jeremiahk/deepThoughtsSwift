@@ -30,6 +30,8 @@
 		27950E861C4C995000544741 /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950E851C4C995000544741 /* CellConfigurator.swift */; };
 		27950E871C4C995000544741 /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950E851C4C995000544741 /* CellConfigurator.swift */; };
 		27950E881C4C995A00544741 /* GCDQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950E831C4C989600544741 /* GCDQueue.swift */; };
+		279868481CAD6B96007FEC21 /* NimbleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279868461CAD6B4D007FEC21 /* NimbleConfig.swift */; };
+		2798684A1CAD6BA5007FEC21 /* NimbleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279868461CAD6B4D007FEC21 /* NimbleConfig.swift */; };
 		27C9F8E01C4C54E000181DCC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313341C4C2795002FF628 /* MainViewController.swift */; };
 		27C9F8E11C4C54EF00181DCC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313361C4C2801002FF628 /* SettingsViewController.swift */; };
 		27C9F8E21C4C54F400181DCC /* MainTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313381C4C2A55002FF628 /* MainTableViewManager.swift */; };
@@ -87,6 +89,7 @@
 		272184111CACCF510017A48A /* MainVCSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainVCSpec.swift; path = "Main View/MainVCSpec.swift"; sourceTree = "<group>"; };
 		27950E831C4C989600544741 /* GCDQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GCDQueue.swift; path = UtilityFiles/GCDQueue.swift; sourceTree = "<group>"; };
 		27950E851C4C995000544741 /* CellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellConfigurator.swift; path = UtilityFiles/CellConfigurator.swift; sourceTree = "<group>"; };
+		279868461CAD6B4D007FEC21 /* NimbleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NimbleConfig.swift; path = DeepThoughtsSwift/SupportingFiles/NimbleConfig.swift; sourceTree = "<group>"; };
 		27C9F8E51C4C584F00181DCC /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		27ED93B61C4DCE7B00A73A2C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = UtilityFiles/UIColor.swift; sourceTree = "<group>"; };
 		27F2C2EF1C6C258C00FC06D2 /* TextMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextMask.swift; path = UtilityFiles/TextMask.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 				271313161C4C25A9002FF628 /* DeepThoughtsSwiftTests */,
 				271313211C4C25A9002FF628 /* DeepThoughtsSwiftUITests */,
 				271313001C4C25A8002FF628 /* Products */,
+				279868451CAD6AC3007FEC21 /* Supporting Files */,
 				89E8BE4A0EB8C30E71F873B5 /* Pods */,
 				8CC78230098DA219040FF8DC /* Frameworks */,
 			);
@@ -247,6 +251,14 @@
 				27F2C2EF1C6C258C00FC06D2 /* TextMask.swift */,
 			);
 			name = UtilityFiles;
+			sourceTree = "<group>";
+		};
+		279868451CAD6AC3007FEC21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				279868461CAD6B4D007FEC21 /* NimbleConfig.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		89E8BE4A0EB8C30E71F873B5 /* Pods */ = {
@@ -515,6 +527,7 @@
 				27C9F8E21C4C54F400181DCC /* MainTableViewManager.swift in Sources */,
 				271313451C4C4D81002FF628 /* SettingsTableViewCell.swift in Sources */,
 				27C9F8E71C4C584F00181DCC /* NavigationController.swift in Sources */,
+				2798684A1CAD6BA5007FEC21 /* NimbleConfig.swift in Sources */,
 				27F2C2F41C6C25B900FC06D2 /* TextMaskTest.swift in Sources */,
 				27C9F8E01C4C54E000181DCC /* MainViewController.swift in Sources */,
 				27C9F8E81C4C5D2D00181DCC /* FakeData.swift in Sources */,
@@ -527,6 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				279868481CAD6B96007FEC21 /* NimbleConfig.swift in Sources */,
 				271313231C4C25A9002FF628 /* DeepThoughtsSwiftUITests.swift in Sources */,
 				272184121CACCF510017A48A /* MainVCSpec.swift in Sources */,
 			);
