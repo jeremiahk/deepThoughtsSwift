@@ -3,4 +3,17 @@ platform :ios, '9.0'
 
 xcodeproj 'DeepThoughtsSwift'
 
-pod 'Parse'
+use_frameworks!
+
+def testing_pods
+    pod 'Quick', '~> 0.9.0'
+    pod 'Nimble', '3.0.0'
+end
+
+target 'DeepThoughtsSwiftTests' do
+    testing_pods
+end
+
+target 'DeepThoughtsSwiftUITests' do
+    testing_pods
+end

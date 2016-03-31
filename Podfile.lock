@@ -1,13 +1,13 @@
 PODS:
-  - Bolts/Tasks (1.6.0)
-  - Parse (1.12.0):
-    - Bolts/Tasks (~> 1.5)
+  - Nimble (3.0.0)
+  - Quick (0.9.1)
 
 DEPENDENCIES:
-  - Parse
+  - Nimble (= 3.0.0)
+  - Quick (~> 0.9.0)
 
 SPEC CHECKSUMS:
-  Bolts: f52a250053bb517ca874523c3913776359ab3def
-  Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
+  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  Quick: a5221fc21788b6aeda934805e68b061839bc3165
 
 COCOAPODS: 0.39.0
