@@ -21,18 +21,6 @@ class TextMaskTest: XCTestCase {
         super.tearDown()
     }
     
-    func testThatItInitialisesWithCAShapeLayer() {
-        // Given
-        let font = UIFont(name: "HelveticaNeue-Light", size: 17)
-        let testString = NSAttributedString(string: "This is a good test", attributes: [NSFontAttributeName: font!])
-        
-        // When
-        let tm = TextMask(fromAttributedString: testString)
-        
-        // That
-        XCTAssertNotNil(tm.mask, "TextMask did not initialise with a CAShapeLayer")
-    }
-    
 //    func testThatItReturnsTypeCAShapeLayer() {
 //        // Given
 //        let font = UIFont(name: "HelveticaNeue-Light", size: 17)
