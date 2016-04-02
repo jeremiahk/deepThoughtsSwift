@@ -46,6 +46,7 @@
 		27F2C2F11C6C258C00FC06D2 /* TextMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2C2EF1C6C258C00FC06D2 /* TextMask.swift */; };
 		27F2C2F41C6C25B900FC06D2 /* TextMaskTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2C2F21C6C25B900FC06D2 /* TextMaskTest.swift */; };
 		27F379911CB03C9800B4209A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F379901CB03C9800B4209A /* DataController.swift */; };
+		27F379941CB0430F00B4209A /* DeepThoughtsCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27F379921CB0430F00B4209A /* DeepThoughtsCoreData.xcdatamodeld */; };
 		47688FE43A5E8A9359BA0375 /* Pods_DeepThoughtsSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9106EEF11AE599A8208759 /* Pods_DeepThoughtsSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		27F2C2EF1C6C258C00FC06D2 /* TextMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextMask.swift; path = UtilityFiles/TextMask.swift; sourceTree = "<group>"; };
 		27F2C2F21C6C25B900FC06D2 /* TextMaskTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextMaskTest.swift; path = "Utility Files/TextMaskTest.swift"; sourceTree = "<group>"; };
 		27F379901CB03C9800B4209A /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = Controllers/DataController.swift; sourceTree = "<group>"; };
+		27F379931CB0430F00B4209A /* DeepThoughtsCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeepThoughtsCoreData.xcdatamodel; sourceTree = "<group>"; };
 		37C8B30E23F26EEA156FE64B /* Pods-DeepThoughtsSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepThoughtsSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeepThoughtsSwiftTests/Pods-DeepThoughtsSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A994C5AF55FF47CF2686CD2 /* Pods_DeepThoughtsSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepThoughtsSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EB4316ACB20E2E25F008BB /* Pods-DeepThoughtsSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepThoughtsSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeepThoughtsSwiftTests/Pods-DeepThoughtsSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				2713130B1C4C25A8002FF628 /* LaunchScreen.storyboard */,
 				2713133C1C4C2F30002FF628 /* CircleButton.swift */,
 				2713133E1C4C3458002FF628 /* FakeData.swift */,
+				27F379921CB0430F00B4209A /* DeepThoughtsCoreData.xcdatamodeld */,
 			);
 			path = DeepThoughtsSwift;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				27C9F8E61C4C584F00181DCC /* NavigationController.swift in Sources */,
 				27ED93B71C4DCE7B00A73A2C /* UIColor.swift in Sources */,
 				271313411C4C4D6C002FF628 /* SettingsTableViewManager.swift in Sources */,
+				27F379941CB0430F00B4209A /* DeepThoughtsCoreData.xcdatamodeld in Sources */,
 				2713133D1C4C2F30002FF628 /* CircleButton.swift in Sources */,
 				271313441C4C4D81002FF628 /* SettingsTableViewCell.swift in Sources */,
 				27950E841C4C989600544741 /* GCDQueue.swift in Sources */,
@@ -782,6 +786,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27F379921CB0430F00B4209A /* DeepThoughtsCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				27F379931CB0430F00B4209A /* DeepThoughtsCoreData.xcdatamodel */,
+			);
+			currentVersion = 27F379931CB0430F00B4209A /* DeepThoughtsCoreData.xcdatamodel */;
+			path = DeepThoughtsCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 271312F71C4C25A8002FF628 /* Project object */;
 }
