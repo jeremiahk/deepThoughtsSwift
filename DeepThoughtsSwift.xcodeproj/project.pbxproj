@@ -45,6 +45,7 @@
 		27F2C2F01C6C258C00FC06D2 /* TextMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2C2EF1C6C258C00FC06D2 /* TextMask.swift */; };
 		27F2C2F11C6C258C00FC06D2 /* TextMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2C2EF1C6C258C00FC06D2 /* TextMask.swift */; };
 		27F2C2F41C6C25B900FC06D2 /* TextMaskTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2C2F21C6C25B900FC06D2 /* TextMaskTest.swift */; };
+		27F379911CB03C9800B4209A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F379901CB03C9800B4209A /* DataController.swift */; };
 		47688FE43A5E8A9359BA0375 /* Pods_DeepThoughtsSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9106EEF11AE599A8208759 /* Pods_DeepThoughtsSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		27ED93B61C4DCE7B00A73A2C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = UtilityFiles/UIColor.swift; sourceTree = "<group>"; };
 		27F2C2EF1C6C258C00FC06D2 /* TextMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextMask.swift; path = UtilityFiles/TextMask.swift; sourceTree = "<group>"; };
 		27F2C2F21C6C25B900FC06D2 /* TextMaskTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextMaskTest.swift; path = "Utility Files/TextMaskTest.swift"; sourceTree = "<group>"; };
+		27F379901CB03C9800B4209A /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = Controllers/DataController.swift; sourceTree = "<group>"; };
 		37C8B30E23F26EEA156FE64B /* Pods-DeepThoughtsSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepThoughtsSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeepThoughtsSwiftTests/Pods-DeepThoughtsSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A994C5AF55FF47CF2686CD2 /* Pods_DeepThoughtsSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepThoughtsSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EB4316ACB20E2E25F008BB /* Pods-DeepThoughtsSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepThoughtsSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeepThoughtsSwiftTests/Pods-DeepThoughtsSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */,
 				27C9F8E51C4C584F00181DCC /* NavigationController.swift */,
+				27F379901CB03C9800B4209A /* DataController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				271313031C4C25A8002FF628 /* AppDelegate.swift in Sources */,
 				271313471C4C4F84002FF628 /* CircleTransitionAnimator.swift in Sources */,
 				27950E861C4C995000544741 /* CellConfigurator.swift in Sources */,
+				27F379911CB03C9800B4209A /* DataController.swift in Sources */,
 				2713133B1C4C2C4B002FF628 /* MainTableViewCell.swift in Sources */,
 				271313371C4C2801002FF628 /* SettingsViewController.swift in Sources */,
 			);
