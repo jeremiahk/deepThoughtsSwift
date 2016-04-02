@@ -29,8 +29,23 @@ class DataController {
             do {
                 try psc.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil)
             } catch {
-                fatalError("Failed \(error)")
+                fatalError("Failed: \(error)")
             }
+        }
+    }
+
+    func save() {
+        if !NSThread.isMainThread() {
+            Queue.Main.execute() {
+                self.save()
+            }
+            return
+        }
+        
+        do {
+            try managedObjectContext.save()
+        } catch {
+            fatalError("Saved failed: \(error)")
         }
     }
 }
