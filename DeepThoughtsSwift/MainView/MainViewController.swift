@@ -10,9 +10,10 @@ protocol hasCircleButton {
 }
 
 class MainViewController: UIViewController, hasCircleButton {
-    
     @IBOutlet weak var circleButton: CircleButton!
     @IBOutlet weak var tableView: UITableView!
+
+    var dataController: DataController?
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
