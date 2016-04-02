@@ -10,7 +10,7 @@ class DataController {
     let managedObjectContext: NSManagedObjectContext
     
     init() {
-        guard let modelURL = NSBundle.mainBundle().URLForResource("DataModel", withExtension: "momd") else {
+        guard let modelURL = NSBundle.mainBundle().URLForResource("DeepThoughtsCoreData", withExtension: "momd") else {
             fatalError("Unable to find model file")
         }
         guard let model = NSManagedObjectModel(contentsOfURL: modelURL) else {
