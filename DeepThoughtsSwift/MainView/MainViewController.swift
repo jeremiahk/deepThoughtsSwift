@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import CoreData
 
 protocol hasCircleButton {
     func getCircleButton() -> CircleButton
