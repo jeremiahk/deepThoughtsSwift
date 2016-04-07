@@ -26,6 +26,8 @@
 		271313471C4C4F84002FF628 /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */; };
 		271313481C4C4F84002FF628 /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */; };
 		272184121CACCF510017A48A /* MainVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272184111CACCF510017A48A /* MainVCSpec.swift */; };
+		27379D0F1CB4A9A4006074BC /* fakeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 27379D0E1CB4A9A4006074BC /* fakeData.json */; };
+		27379D121CB4B175006074BC /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27379D111CB4B175006074BC /* NetworkController.swift */; };
 		27950E841C4C989600544741 /* GCDQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950E831C4C989600544741 /* GCDQueue.swift */; };
 		27950E861C4C995000544741 /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950E851C4C995000544741 /* CellConfigurator.swift */; };
 		27950E871C4C995000544741 /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950E851C4C995000544741 /* CellConfigurator.swift */; };
@@ -89,6 +91,8 @@
 		271313431C4C4D81002FF628 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewCell.swift; path = SettingsView/SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleTransitionAnimator.swift; path = Controllers/CircleTransitionAnimator.swift; sourceTree = "<group>"; };
 		272184111CACCF510017A48A /* MainVCSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainVCSpec.swift; path = "Main View/MainVCSpec.swift"; sourceTree = "<group>"; };
+		27379D0E1CB4A9A4006074BC /* fakeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fakeData.json; sourceTree = "<group>"; };
+		27379D111CB4B175006074BC /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = Data/NetworkController.swift; sourceTree = "<group>"; };
 		27950E831C4C989600544741 /* GCDQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GCDQueue.swift; path = UtilityFiles/GCDQueue.swift; sourceTree = "<group>"; };
 		27950E851C4C995000544741 /* CellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellConfigurator.swift; path = UtilityFiles/CellConfigurator.swift; sourceTree = "<group>"; };
 		279868461CAD6B4D007FEC21 /* NimbleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NimbleConfig.swift; path = DeepThoughtsSwift/SupportingFiles/NimbleConfig.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 		271313011C4C25A8002FF628 /* DeepThoughtsSwift */ = {
 			isa = PBXGroup;
 			children = (
+				27379D101CB4B153006074BC /* Data */,
 				27950E821C4C980200544741 /* UtilityFiles */,
 				271313331C4C26F9002FF628 /* SupportFiles */,
 				271313321C4C26EB002FF628 /* Controllers */,
@@ -218,7 +223,6 @@
 			children = (
 				271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */,
 				27C9F8E51C4C584F00181DCC /* NavigationController.swift */,
-				27F379901CB03C9800B4209A /* DataController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -227,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				271313091C4C25A8002FF628 /* Assets.xcassets */,
+				27379D0E1CB4A9A4006074BC /* fakeData.json */,
 				2713130E1C4C25A8002FF628 /* Info.plist */,
 			);
 			name = SupportFiles;
@@ -238,6 +243,15 @@
 				272184111CACCF510017A48A /* MainVCSpec.swift */,
 			);
 			name = MainView;
+			sourceTree = "<group>";
+		};
+		27379D101CB4B153006074BC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				27F379901CB03C9800B4209A /* DataController.swift */,
+				27379D111CB4B175006074BC /* NetworkController.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		2755FE941C6D6C6E008F7B2A /* UtilityFiles */ = {
@@ -398,6 +412,7 @@
 			files = (
 				2713130D1C4C25A8002FF628 /* LaunchScreen.storyboard in Resources */,
 				2713130A1C4C25A8002FF628 /* Assets.xcassets in Resources */,
+				27379D0F1CB4A9A4006074BC /* fakeData.json in Resources */,
 				271313081C4C25A8002FF628 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27379D121CB4B175006074BC /* NetworkController.swift in Sources */,
 				27F2C2F01C6C258C00FC06D2 /* TextMask.swift in Sources */,
 				27C9F8E61C4C584F00181DCC /* NavigationController.swift in Sources */,
 				27ED93B71C4DCE7B00A73A2C /* UIColor.swift in Sources */,
