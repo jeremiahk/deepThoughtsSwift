@@ -49,6 +49,7 @@ class DataController {
         }
     }
 
+    //MARK: -Access methods
     func getAllThoughts(closure: ([AnyObject]) -> ()) {
         let nc = NetworkController()
         nc.getAllThoughts() { json in
