@@ -34,7 +34,7 @@ class DataController {
         }
     }
 
-    func save() {
+    private func save() {
         if !NSThread.isMainThread() {
             Queue.Main.execute() {
                 self.save()
@@ -46,6 +46,71 @@ class DataController {
             try managedObjectContext.save()
         } catch {
             fatalError("Saved failed: \(error)")
+        }
+    }
+
+    func getAllThoughts(closure: ([AnyObject]) -> ()) {
+        let nc = NetworkController()
+        nc.getAllThoughts() { json in
+            //TODO: Server needs to return the correct data.            
+            
+            let request = NSFetchRequest(entityName: "Thought")
+            let result = try! self.managedObjectContext.executeFetchRequest(request)
+            
+            closure(result)
+        }
+    }
+
+    
+    
+    
+    
+    
+    
+    func testFakeData() {
+        if let dataPath = NSBundle.mainBundle().pathForResource("fakeData", ofType: "json") {
+            let rawData = NSData(contentsOfFile: dataPath)
+
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(rawData!, options: .AllowFragments)
+                print("Json is \(json)")
+            } catch {
+                print("Error is \(error)")
+            }
+        }
+    }
+
+    func testSaveAndRetrieve() {
+        let entityThought = NSEntityDescription.entityForName("Thought", inManagedObjectContext: managedObjectContext)
+        let testThought = NSManagedObject(entity: entityThought!, insertIntoManagedObjectContext: managedObjectContext)
+        
+        testThought.setValue("This is the test title2", forKey: "title")
+        
+        let entityCategory = NSEntityDescription.entityForName("Category", inManagedObjectContext: managedObjectContext)
+        let testCategory = NSManagedObject(entity: entityCategory!, insertIntoManagedObjectContext: managedObjectContext)
+        
+        testCategory.setValue("This is test category2", forKey: "name")
+        
+        testThought.setValue(testCategory, forKey: "category")
+        
+        self.save()
+        
+        // Fetch
+        let fetchRequest = NSFetchRequest(entityName: "Thought")
+        
+        do {
+            let result = try managedObjectContext.executeFetchRequest(fetchRequest)
+            
+            for item in result {
+                if let title = item.valueForKey("title") {
+                    print("Title is \(title)")
+                }
+                if let category = item.valueForKey("category") {
+                    print("Category is \(category.valueForKey("name"))")
+                }
+            }
+        } catch {
+            print("Failed")
         }
     }
 }

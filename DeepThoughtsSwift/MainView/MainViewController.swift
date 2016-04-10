@@ -20,6 +20,12 @@ class MainViewController: UIViewController, hasCircleButton {
         super.viewWillAppear(animated)
         
         circleButton.shrink()
+        
+        
+        //TODO: Move this into viewModel object
+        dataController!.getAllThoughts() {data in
+            print("data is data")
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
