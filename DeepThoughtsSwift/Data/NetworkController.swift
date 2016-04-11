@@ -8,13 +8,21 @@
 
 import Foundation
 
-class NetworkController: NSObject {
+protocol NetworkProtocol {
+    func getAllThoughts(closure: [String: AnyObject] -> ())
+    func getAllCategories(closure: [String: AnyObject] -> ())
+}
+
+class NetworkController: NSObject, NetworkProtocol {
     let queue = NSOperationQueue()
 
     func getAllThoughts(closure: [String: AnyObject] -> ()) {
         let request = AllThoughts()
         request.closure = closure
         queue.addOperation(request)
+    }
+
+    func getAllCategories(closure: [String: AnyObject] -> ()) {
     }
 }
 

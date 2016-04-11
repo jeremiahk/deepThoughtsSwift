@@ -26,6 +26,7 @@
 		271313471C4C4F84002FF628 /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */; };
 		271313481C4C4F84002FF628 /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */; };
 		272184121CACCF510017A48A /* MainVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272184111CACCF510017A48A /* MainVCSpec.swift */; };
+		272D6DF11CBB457F0060DCCA /* TestNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D6DF01CBB457F0060DCCA /* TestNetworkController.swift */; };
 		27379D0F1CB4A9A4006074BC /* fakeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 27379D0E1CB4A9A4006074BC /* fakeData.json */; };
 		27379D121CB4B175006074BC /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27379D111CB4B175006074BC /* NetworkController.swift */; };
 		27950E841C4C989600544741 /* GCDQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950E831C4C989600544741 /* GCDQueue.swift */; };
@@ -91,6 +92,7 @@
 		271313431C4C4D81002FF628 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewCell.swift; path = SettingsView/SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		271313461C4C4F84002FF628 /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleTransitionAnimator.swift; path = Controllers/CircleTransitionAnimator.swift; sourceTree = "<group>"; };
 		272184111CACCF510017A48A /* MainVCSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainVCSpec.swift; path = "Main View/MainVCSpec.swift"; sourceTree = "<group>"; };
+		272D6DF01CBB457F0060DCCA /* TestNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestNetworkController.swift; path = DeepThoughtsSwiftTests/Data/TestNetworkController.swift; sourceTree = SOURCE_ROOT; };
 		27379D0E1CB4A9A4006074BC /* fakeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fakeData.json; sourceTree = "<group>"; };
 		27379D111CB4B175006074BC /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = Data/NetworkController.swift; sourceTree = "<group>"; };
 		27950E831C4C989600544741 /* GCDQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GCDQueue.swift; path = UtilityFiles/GCDQueue.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			children = (
 				27F379901CB03C9800B4209A /* DataController.swift */,
 				27379D111CB4B175006074BC /* NetworkController.swift */,
+				272D6DF01CBB457F0060DCCA /* TestNetworkController.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				271313441C4C4D81002FF628 /* SettingsTableViewCell.swift in Sources */,
 				27950E841C4C989600544741 /* GCDQueue.swift in Sources */,
 				271313351C4C2795002FF628 /* MainViewController.swift in Sources */,
+				272D6DF11CBB457F0060DCCA /* TestNetworkController.swift in Sources */,
 				2713133F1C4C3458002FF628 /* FakeData.swift in Sources */,
 				271313391C4C2A55002FF628 /* MainTableViewManager.swift in Sources */,
 				271313031C4C25A8002FF628 /* AppDelegate.swift in Sources */,
