@@ -8,7 +8,12 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    let dataController = DataController()
+    lazy var dataController: DataController = {
+        let dc = DataController()
+//        dc.networkController = NetworkController()
+        dc.networkController = TestNetworkController()
+        return dc
+    }()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         application.statusBarHidden = true
