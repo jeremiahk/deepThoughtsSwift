@@ -8,6 +8,7 @@ import CoreData
 
 class DataController {
     let managedObjectContext: NSManagedObjectContext
+    var networkController: NetworkProtocol!
     
     init() {
         guard let modelURL = NSBundle.mainBundle().URLForResource("DeepThoughtsCoreData", withExtension: "momd") else {
@@ -51,17 +52,18 @@ class DataController {
 
     //MARK: -Access methods
     func getAllThoughts(closure: ([AnyObject]) -> ()) {
-        let nc = NetworkController()
-        nc.getAllThoughts() { json in
-            //TODO: Server needs to return the correct data.            
-            
-            let request = NSFetchRequest(entityName: "Thought")
-            let result = try! self.managedObjectContext.executeFetchRequest(request)
-            
-            closure(result)
+//        networkController.getAllThoughts() { json in
+//            //TODO: Server needs to return the correct data.            
+//            
+//            let request = NSFetchRequest(entityName: "Thought")
+//            let result = try! self.managedObjectContext.executeFetchRequest(request)
+//            
+//            closure(result)
+//        }
+        networkController.getAllCategories() {json in
+            print("json is \(json)")
         }
     }
-
     
     
     
