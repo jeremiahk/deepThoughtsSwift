@@ -5,10 +5,11 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController, hasCircleButton {
-    
+class SettingsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var circleButton: CircleButton!
+
+    var dataController: DataController!
     
     lazy var gradientLayer: CAGradientLayer = {
         let gradient = CAGradientLayer()
@@ -25,6 +26,12 @@ class SettingsViewController: UIViewController, hasCircleButton {
         
         return gradient
     }()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        assertDependencies()
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -43,8 +50,22 @@ class SettingsViewController: UIViewController, hasCircleButton {
     @IBAction func touchUpInside(sender: CircleButton) {
         self.navigationController?.popViewControllerAnimated(true)
     }
-    
+}
+
+extension SettingsViewController: hasCircleButton {
     func getCircleButton() -> CircleButton {
         return circleButton
+    }
+}
+
+extension SettingsViewController: Injectable {
+    typealias T = DataController
+    
+    func inject(dataController: T) {
+        self.dataController = dataController
+    }
+    
+    func assertDependencies() {
+        assert(self.dataController != nil)
     }
 }

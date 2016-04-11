@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.statusBarHidden = true
 
         if let navigationController = window?.rootViewController as? UINavigationController, vc = navigationController.topViewController as? MainViewController {
-            vc.dataController = self.dataController
+            vc.inject(self.dataController)
         } else {
             fatalError("Unexpected vc in window")
         }
