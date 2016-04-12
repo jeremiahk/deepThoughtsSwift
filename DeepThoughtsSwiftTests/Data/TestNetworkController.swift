@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TestNetworkController: NSObject, NetworkProtocol {
+final class TestNetworkController: NSObject, NetworkProtocol {
     private lazy var testData: [[String: AnyObject]] = self.getTestData()!
     
     private func getTestData() -> [[String: AnyObject]]? {

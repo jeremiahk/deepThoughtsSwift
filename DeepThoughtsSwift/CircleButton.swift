@@ -5,7 +5,7 @@
 
 import UIKit
 
-public class CircleButton: UIButton {
+final public class CircleButton: UIButton {
     public var buttonColor: UIColor!
 
     public var backgroundSize: CGRect {

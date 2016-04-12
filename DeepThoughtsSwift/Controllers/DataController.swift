@@ -6,7 +6,7 @@
 import Foundation
 import CoreData
 
-class DataController {
+final class DataController {
     let managedObjectContext: NSManagedObjectContext
     var networkController: NetworkProtocol!
     
