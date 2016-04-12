@@ -38,10 +38,7 @@ extension SegueHandlerType where Self: UIViewController, SegueIdentifier.RawValu
 
 
 
-
-
-
-class MainViewController: UIViewController, SegueHandlerType {
+final class MainViewController: UIViewController, SegueHandlerType {
     @IBOutlet weak var circleButton: CircleButton!
     @IBOutlet weak var tableView: UITableView!
 

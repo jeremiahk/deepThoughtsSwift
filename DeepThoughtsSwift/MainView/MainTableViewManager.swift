@@ -5,7 +5,7 @@
 
 import UIKit
 
-class MainTableViewManager: NSObject, UITableViewDataSource, UITableViewDelegate {
+final class MainTableViewManager: NSObject, UITableViewDataSource, UITableViewDelegate {
     private let cells: [CellConfiguratorType] = {
         var cells: [CellConfiguratorType] = []
         

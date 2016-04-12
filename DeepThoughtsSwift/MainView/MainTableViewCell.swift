@@ -14,7 +14,7 @@ struct MainTableViewCellData {
     let category: String
 }
 
-class MainTableViewCell: UITableViewCell {
+final class MainTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var sectionLabel: UILabel!

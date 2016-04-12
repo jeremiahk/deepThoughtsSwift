@@ -13,7 +13,7 @@ struct SettingsTableViewCellData {
     let category: String
 }
 
-class SettingsTableViewCell: UITableViewCell {
+final class SettingsTableViewCell: UITableViewCell {
     private var textMask: TextMask?
     
     var greyView: UIView?

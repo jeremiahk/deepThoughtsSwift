@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class TextMask: NSObject {
+final public class TextMask: NSObject {
     private var frame: CGRect!
     private var offset: CGRect?
     public var text: NSAttributedString! {

@@ -5,7 +5,7 @@
 
 import UIKit
 
-class CircleTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+final class CircleTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
     private var transitionContext: UIViewControllerContextTransitioning!
 

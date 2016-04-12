@@ -5,7 +5,7 @@
 
 import UIKit
 
-class SettingsTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
+final class SettingsTableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
     var tableView: UITableView!
     
     convenience init(tableView: UITableView) {

@@ -13,7 +13,7 @@ protocol NetworkProtocol {
     func getAllCategories(closure: [String: AnyObject] -> ())
 }
 
-class NetworkController: NSObject, NetworkProtocol {
+final class NetworkController: NSObject, NetworkProtocol {
     let queue = NSOperationQueue()
 
     func getAllThoughts(closure: [String: AnyObject] -> ()) {
@@ -77,7 +77,7 @@ class BaseOperation: NSOperation, NSURLSessionDataDelegate {
     }
 }
 
-class AllThoughts: BaseOperation {
+final class AllThoughts: BaseOperation {
     override func start() {
         queuePriority = .High
         if cancelled {
